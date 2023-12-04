@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  database: 
+  database:
     image: mongo
     networks:
       - video
@@ -13,8 +13,7 @@ services:
     volumes:
       - ../:/video_api
     working_dir: /video_api
-    ports:
-      -3000:3000
+    ports: -3000:3000
     env_file: ../.env
     links:
       - database
