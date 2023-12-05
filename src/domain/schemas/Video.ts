@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 export interface IVideo {
   _id?: string;
   title: string;
-  description: string;
+  description?: string;
   url: string;
 }
 
