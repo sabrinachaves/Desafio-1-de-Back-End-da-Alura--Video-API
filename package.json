@@ -39,7 +39,8 @@
     "mongoose": "^6.3.4",
     "uuid": "^8.3.2",
     "http-status": "^1.5.2",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "joi": "^17.5.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.23.0",
