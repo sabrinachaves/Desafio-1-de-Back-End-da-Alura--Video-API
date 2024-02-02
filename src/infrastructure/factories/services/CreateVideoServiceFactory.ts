@@ -12,7 +12,7 @@ export default class CreateVideoServiceFactory {
       return this.service;
     }
 
-    this.videoRepository = videoRepository || (await VideoRepositoryFactory.make());
+    this.videoRepository = videoRepository ?? (await VideoRepositoryFactory.make());
 
     this.service = new CreateVideoService(this.videoRepository);
     return this.service;

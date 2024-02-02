@@ -1,5 +1,5 @@
 import ICreateVideoService from '@service/CreateVideo/interfaces/ICreateVideoService';
-import CreateVideoController from 'src/application/v1/controller/CreateVideoController';
+import CreateVideoController from '../../../../src/application/v1/controller/CreateVideoController';
 import CreateVideoServiceFactory from '../services/CreateVideoServiceFactory';
 
 export default class CreateVideoControllerFactory {
@@ -11,7 +11,7 @@ export default class CreateVideoControllerFactory {
     }
 
     this.createVideoController = new CreateVideoController(
-      createVideoService || (await CreateVideoServiceFactory.make()),
+      createVideoService ?? (await CreateVideoServiceFactory.make()),
     );
     return this.createVideoController;
   }
