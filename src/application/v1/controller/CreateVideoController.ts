@@ -19,8 +19,6 @@ export default class CreateVideoController {
 
       const video = await this.createVideoService.handle(createVideoDTO);
 
-      console.log(`Video created - id ${video._id}`);
-
       return response.status(CREATED).json(video);
     } catch (err: any) {
       const errorInfo = buildErrorInfo(err);
