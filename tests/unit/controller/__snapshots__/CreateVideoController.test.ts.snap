@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateVideoController should match the snapshot #unit 1`] = `
+CreateVideoController {
+  "createVideoService": CreateVideoServiceMock {},
+  "execute": [Function],
+}
+`;
