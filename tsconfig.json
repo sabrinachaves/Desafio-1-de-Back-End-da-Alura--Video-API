@@ -29,8 +29,9 @@
       "@domain/*": ["./src/domain/*"],
       "@config/*": ["./src/config/*"],
       "@service/*": ["./src/service/*"],
-      "@infrastructure/*": ["./src/infrastructure/*"]
+      "@infrastructure/*": ["./src/infrastructure/*"],
+      "@application/*": ["./src/application/*"]
     }
-  }
-  //"include": ["src/**/*.ts"]
+  },
+  "include": ["src/**/*.ts"]
 }

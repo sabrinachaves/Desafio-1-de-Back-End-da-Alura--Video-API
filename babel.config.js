@@ -19,6 +19,7 @@ module.exports = {
           '@domain': './src/domain',
           '@config': './src/config',
           '@service': './src/service',
+          '@application': './src/application',
         },
       },
     ],
