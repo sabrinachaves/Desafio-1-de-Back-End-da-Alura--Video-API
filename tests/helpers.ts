@@ -7,6 +7,7 @@ import { validateSchema } from '../src/application/v1/middlewares/ValidateSchema
 import ICreateVideoService from '../src/service/CreateVideo/interfaces/ICreateVideoService';
 import CreateVideoServiceMock from './mocks/CreateVideoServiceMock';
 import CreateVideoControllerFactory from '../src/infrastructure/factories/controller/CreateVideoControllerFactory';
+import PingControllerFactory from '../src/infrastructure/factories/controller/PingControllerFactory';
 
 interface MockServerOptions {
   createVideoService?: ICreateVideoService;
@@ -17,6 +18,7 @@ const routes = async (options: MockServerOptions): Promise<Router> => {
 
   const router = Router();
 
+  router.get('/v1/ping', PingControllerFactory.make().execute);
   router.post(
     '/v1/video',
     validateSchema('createVideo', 'body'),
