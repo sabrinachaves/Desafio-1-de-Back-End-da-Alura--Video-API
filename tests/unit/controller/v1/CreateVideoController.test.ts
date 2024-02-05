@@ -1,9 +1,9 @@
 import { Request } from 'express';
 import { CREATED } from 'http-status';
-import CreateVideoController from '../../../src/application/v1/controller/CreateVideoController';
-import CreateVideoServiceMock from '../../mocks/CreateVideoServiceMock';
-import { IVideo } from '../../../src/domain/schemas/Video';
-import { videoMock } from '../../mocks/VideoMock';
+import CreateVideoController from '../../../../src/application/v1/controller/CreateVideoController';
+import CreateVideoServiceMock from '../../../mocks/CreateVideoServiceMock';
+import { IVideo } from '../../../../src/domain/schemas/Video';
+import { videoMock } from '../../../mocks/VideoMock';
 
 describe('CreateVideoController', () => {
   const createVideoService = new CreateVideoServiceMock();
