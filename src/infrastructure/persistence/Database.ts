@@ -17,10 +17,12 @@ export default class Database implements IDatabase {
       console.log('Database connected');
 
       connectionMongoDb.connection.on('error', () => {
+        console.log('Error on database connection');
         throw new Error('Error on database connection');
       });
 
       connectionMongoDb.connection.on('disconnected', () => {
+        console.log('Database disconnected');
         throw new Error('Database disconnected');
       });
     } catch (error) {

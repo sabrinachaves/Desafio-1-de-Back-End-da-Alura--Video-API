@@ -7,7 +7,7 @@ process.env = {
   MONGO_URI: faker.internet.url(),
   MONGO_USER: faker.internet.userName(),
   MONGO_PASSWORD: faker.internet.password(),
-  MONGO_DB_NAME: 'consumable',
+  MONGO_DB_NAME: 'video',
 };
 
 export {};

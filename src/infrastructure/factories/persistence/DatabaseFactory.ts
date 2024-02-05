@@ -14,6 +14,7 @@ export default class DatabaseFactory {
     let options: ConnectOptions = {
       appName: AppConfig.APPLICATION_NAME,
       dbName: AppConfig.MONGO_DB_NAME,
+      replicaSet: 'rs0',
       readPreference: 'secondaryPreferred',
       retryWrites: false,
     };
