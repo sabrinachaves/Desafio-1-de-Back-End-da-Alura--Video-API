@@ -7,8 +7,7 @@ export default class VideoRepository implements IVideoRepository {
 
   async create(video: IVideo): Promise<IVideo> {
     try {
-      const createdVideo = await this.videoModel.create(video);
-      return createdVideo;
+      return await this.videoModel.create(video);
     } catch (err: any) {
       throw err;
     }

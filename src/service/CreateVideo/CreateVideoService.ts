@@ -15,7 +15,6 @@ export default class CreateVideoService implements ICreateVideoService {
       url,
     };
 
-    const video = await this.videoRepository.create(createVideoData);
-    return video;
+    return await this.videoRepository.create(createVideoData);
   }
 }
