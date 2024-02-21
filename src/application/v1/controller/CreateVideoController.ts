@@ -1,6 +1,5 @@
 import { buildErrorInfo } from '@infrastructure/parser/ErrorInfo';
-import ICreateVideoDTO from '@service/CreateVideo/interfaces/ICreateVideoDTO';
-import ICreateVideoService from '@service/CreateVideo/interfaces/ICreateVideoService';
+import ICreateVideoService from '@service/CreateVideo/ICreateVideoService';
 import { RequestHandler } from 'express';
 import { CREATED } from 'http-status';
 
@@ -9,15 +8,9 @@ export default class CreateVideoController {
 
   public execute: RequestHandler = async (request, response) => {
     try {
-      const { title, description, url } = request.body;
+      const createVideo = request.body;
 
-      const createVideoDTO: ICreateVideoDTO = {
-        title,
-        description,
-        url,
-      };
-
-      const video = await this.createVideoService.handle(createVideoDTO);
+      const video = await this.createVideoService.handle(createVideo);
 
       console.log(`video created - id: ${video._id}`);
 

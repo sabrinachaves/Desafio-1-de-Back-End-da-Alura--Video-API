@@ -1,6 +1,6 @@
-import { AppConfig } from '@config/AppConfig';
 import { RequestHandler, Router, json } from 'express';
-import App from 'src/application/App';
+import App from '@application/App';
+import { AppConfig } from '@config/AppConfig';
 
 export default class AppFactory {
   static async make(routes: Router): Promise<App> {

@@ -1,5 +1,5 @@
-import ICreateVideoService from '@service/CreateVideo/interfaces/ICreateVideoService';
-import CreateVideoController from '../../../../src/application/v1/controller/CreateVideoController';
+import ICreateVideoService from '@service/CreateVideo/ICreateVideoService';
+import CreateVideoController from '@application/v1/controller/CreateVideoController';
 import CreateVideoServiceFactory from '../services/CreateVideoServiceFactory';
 
 export default class CreateVideoControllerFactory {

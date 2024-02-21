@@ -1,6 +1,6 @@
 import IVideoRepository from '@domain/repositories/video/IVideoRepository';
 import CreateVideoService from '@service/CreateVideo/CreateVideoService';
-import ICreateVideoService from '@service/CreateVideo/interfaces/ICreateVideoService';
+import ICreateVideoService from '@service/CreateVideo/ICreateVideoService';
 import VideoRepositoryFactory from '../repositories/VideoRepositoryFactory';
 
 export default class CreateVideoServiceFactory {
