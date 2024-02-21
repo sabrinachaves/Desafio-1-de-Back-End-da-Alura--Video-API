@@ -1,4 +1,5 @@
 API em desenvolvimento, cujo objetivo é realizar um CRUD aplicando conceitos de:
+
 - DDD;
 - Testes unitários, de integração e e2e;
 - Typescript;

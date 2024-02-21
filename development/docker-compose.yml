@@ -3,12 +3,11 @@ services:
   database:
     image: mongo
     ports:
-      - 27017:27017
+      - '27017:27017'
     networks:
       - video
     restart: always
     entrypoint: ['/usr/bin/mongod', '--bind_ip_all', '--replSet', 'rs0']
-
   setup-replicaset:
     image: mongo
     networks:
@@ -42,11 +41,11 @@ services:
       - MONGO_URI=mongodb://172.17.0.1:27017
       - MONGO_USER=any
       - MONGO_PASSWORD=any
-      - MONGO_DB_NAME=videos
-      - TZ=America/Sao_Paulo
-    command: ash -c "npm install && npm run seeds:clearDb && npm run seeds:generate && npm run dev"
+      - MONGO_DB_NAME=video
+    command: ash -c "npm ci && npm run dev"
     networks:
       - video
 networks:
   video:
+    external: false
     driver: bridge
