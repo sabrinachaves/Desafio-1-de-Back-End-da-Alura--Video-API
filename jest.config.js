@@ -18,6 +18,7 @@ module.exports = {
     './infra/',
     'src/index.ts',
     './development',
+    'src/config/types',
   ],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
 };
