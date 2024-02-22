@@ -4,7 +4,7 @@ import { RequestHandler, Router, json } from 'express';
 import App from '../src/application/App';
 import { AppConfig } from '../src/config/AppConfig';
 import { validateSchema } from '../src/application/v1/middlewares/ValidateSchema';
-import ICreateVideoService from '../src/service/CreateVideo/interfaces/ICreateVideoService';
+import ICreateVideoService from '../src/service/CreateVideo/ICreateVideoService';
 import CreateVideoServiceMock from './mocks/CreateVideoServiceMock';
 import CreateVideoControllerFactory from '../src/infrastructure/factories/controller/CreateVideoControllerFactory';
 import PingControllerFactory from '../src/infrastructure/factories/controller/PingControllerFactory';
